@@ -1,0 +1,218 @@
+:root {
+    --main-size: 80px;
+}
+
+body {
+    margin: 0 auto;   
+}
+
+* {
+    background-image:url(./images/galaxy.jpg);
+    background-attachment: fixed;
+}
+
+
+.moving {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+}
+
+.part-1 {
+    background-color: white;
+    color: white;
+    width: 100vw;
+    height: 150vh;
+}
+
+.click-btn {
+    color: white;
+    border: none;
+    outline: white;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 60px;
+}
+
+.introduction {
+    font-size: 70px;
+    color: white;
+    position: relative;
+    top: 20%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:none;
+}
+
+.first-row,
+.second-row {
+    background-image: none;
+}
+
+
+.introduction h1 {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;    
+}
+
+.introduction h5 {
+    color: #fff;
+    text-shadow:
+    0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px rgb(23, 203, 235),
+            0 0 80px rgb(23, 203, 235),
+            0 0 90px rgb(23, 203, 235),
+            0 0 100px rgb(23, 203, 235),
+            0 0 150px rgb(23, 203, 235);
+}
+
+h2,
+h3 {
+    background-image: none;
+}
+
+.part-2 {
+    margin: 0;
+    width: 100vw;
+    height: 150vh;
+    
+}
+
+.part-2 h1 {
+    font-size: 80px;
+    color: yellow;
+    text-shadow: 4px 6px green;
+    margin: 0;
+    text-align: center;
+    height: 200px;
+    line-height: 300px;
+}
+
+.part-2 p {
+    text-align: center;
+    color: white;
+    font-size: calc(var(--main) * 0.3);   
+    background-image:none; 
+}
+
+.tmi {
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    background-image:none;
+}
+
+.tmi .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.tmi:hover .text{
+    opacity: 1;
+    background-image:none;
+    color: white;
+}
+
+.tmi:hover img{
+    filter: blur(3px);
+    transform: scale(1.2);
+    background-image:none;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid none;
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background-image:none;
+}
+
+.first-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.second-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.part-3{
+    background-color: cornflowerblue;
+    margin: 0;
+    width: 100vw;
+    height: 150vh;
+}
+
+.part-3 h1{
+    font-size: 80px;
+    color: yellow;
+    text-shadow: 4px 6px purple;
+    margin: 0;
+    text-align: center;
+    height: 200px;
+    line-height: 300px;
+}
+
+.icon {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 800px;
+    font-size: 180px;
+    color: white;
+}
+
+.fas,
+.fab {
+    margin: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes flicker {
+    
+    
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      
+            text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px rgb(23, 203, 235),
+            0 0 80px rgb(23, 203, 235),
+            0 0 90px rgb(23, 203, 235),
+            0 0 100px rgb(23, 203, 235),
+            0 0 150px rgb(23, 203, 235);
+        
+        }
+        
+        20%, 24%, 55% {        
+            text-shadow: none;
+        }    
+      }
